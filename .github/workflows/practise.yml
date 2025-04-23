@@ -1,0 +1,19 @@
+name: practise-dep
+on: push
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - name: get code
+              uses: actions/checkout@v3
+            - name: Install dependecies
+              run: npm ci
+            - name: Lint
+              run: npm run lint
+            - name: Test code
+              run: npm run test
+            - name: dEPLOY CODE
+              run: echo "Deploying"
+    
+
+             
