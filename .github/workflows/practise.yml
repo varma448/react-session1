@@ -10,13 +10,13 @@ jobs:
             - name: Get code
               uses: actions/checkout@v3
             - name: Install dependencies
-              uses: npm ci
+              run: npm ci
             - name: Lint coee
               run: npm run lint
             - name: test code
               run: npm run test
-
     build:
+        needs: test
         runs-on: ubuntu-latest
         steps:
             - name: get code
