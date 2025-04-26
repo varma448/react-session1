@@ -1,8 +1,5 @@
 name: Handle issues
-on:
-    push:
-        branches:
-            - master
+on: push
 jobs:
     output-info:
         runs-on: ubuntu-latest
